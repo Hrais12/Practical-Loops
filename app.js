@@ -1,8 +1,8 @@
 ///----------Number from 0 to 100
-let n=0
-while (n<100) {
-    n++;
-    console.log(n)
+let a=0
+while (a<100) {
+    a++;
+    console.log(a)
     
 }
 
@@ -56,3 +56,42 @@ while (i<100 ) {
     }
     i++;
 }
+
+///////////////////////////////////PART 2
+
+
+// let n=2
+// while (n<100) {
+    
+//     for (let h = 2; h < n; h++) {
+//     if (n%h===0) {
+
+//         continue
+//     } else {
+//         console.log('prime', n)
+        
+//     }
+//     n++;
+//     }
+    
+// }
+
+let n = 8; // Arbitrary number
+
+while (true) {
+    n++;
+    let isPrime = true;
+
+    for (let i = 2; i*i <= n ; i++) {
+        if (n % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        console.log("The next prime number after", n - 1, "is", n);
+        break;
+    }
+}
+
